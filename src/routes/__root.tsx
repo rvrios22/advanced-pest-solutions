@@ -1,21 +1,32 @@
-import { createRootRoute, Link, Outlet } from '@tanstack/react-router'
+import { createRootRoute, Outlet } from '@tanstack/react-router'
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
+import { useEffect, useState } from 'react'
+import MobileNavbar from '../components/nav/MobileNavbar'
+import Navbar from '../components/nav/Navbar'
+import '../css/reset.css'
 import '../css/global.css'
 
-export const Route = createRootRoute({
-  component: () => (
+const RootComponent = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const handleResize = (): void => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return (
     <>
-      <div className="p-2 flex gap-2">
-        <Link to="/" className="[&.active]:font-bold">
-          Home
-        </Link>{' '}
-        <Link to="/about" className="[&.active]:font-bold">
-          About
-        </Link>
-      </div>
-      <hr />
+      {windowWidth > 600 ? <Navbar /> : <MobileNavbar />}
       <Outlet />
       <TanStackRouterDevtools />
     </>
-  ),
-})
+  );
+};
+
+export const Route = createRootRoute({
+  component: RootComponent,
+});
