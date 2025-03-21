@@ -1,0 +1,30 @@
+.landing-container {
+    position: relative;
+}
+.landing-img {
+    object-fit: cover;
+    object-position: top;
+}
+
+.landing-text {
+    position: absolute;
+    bottom: 0;
+    left: 2%;
+}
+
+.landing-header {
+    padding-right: 10px;
+    -webkit-text-stroke: 1px black;
+    font-size: clamp(2rem, 5vw, 4rem);
+    text-wrap: wrap;
+}
+
+.red {
+    color: red
+}
+.blue {
+    color: blue
+}
+.white {
+    color: white
+}
