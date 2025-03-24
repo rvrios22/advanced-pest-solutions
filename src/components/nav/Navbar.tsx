@@ -1,8 +1,14 @@
 import React from 'react'
+import QuoteButton from '../QuoteButton'
 
 function Navbar() {
   return (
-    <nav>navbar</nav>
+    <nav>
+      <div>APS</div>
+      <div>
+        <QuoteButton />
+      </div>
+    </nav>
   )
 }
 

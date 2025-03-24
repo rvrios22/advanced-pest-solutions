@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../css/landing.css";
+import QuoteButton from "./QuoteButton";
 
 function Landing() {
   const [imgSize, setImgSize] = useState({
@@ -35,6 +36,7 @@ function Landing() {
           <span className="white landing-header">PEST</span>
           <span className="blue landing-header">SOLUTIONS</span>
         </h1>
+        <QuoteButton />
       </div>
     </section>
   );
