@@ -11,6 +11,7 @@
 .landing-text {
     position: absolute;
     bottom: 2%;
+    text-align: left;
     left: 2%;
     font-family: "Lora", serif;
     font-optical-sizing: auto;
@@ -20,11 +21,16 @@
 
 .landing-header {
     padding-right: 10px;
+    margin-bottom: .2em;
     font-size: clamp(2rem, 5vw, 4rem);
     display: inline-block;
 }
 
-.landing-text p.sub-header,
+.landing-sub-header {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.landing-text p.landing-sub-header,
 .landing-text h1 {
     -webkit-text-stroke: 1.5px black;
 }

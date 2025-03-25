@@ -1,3 +1,13 @@
 .sub-header {
     font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-family: "Lora", serif;
+    text-align: center;
+    margin: .5em auto 0;
+    border-bottom: 1px solid black;
+    max-width: max-content;
+}
+
+.general-text {
+    font-family: 'Lato', sans-serif;
+    font-size: clamp(1rem, 2vw, 1.25rem);
 }

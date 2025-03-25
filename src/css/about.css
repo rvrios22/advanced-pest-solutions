@@ -1,0 +1,13 @@
+.about-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.about-container img {
+    margin: .5em auto;
+    border-radius: 10px;
+    border: 1.75px solid black;
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+}

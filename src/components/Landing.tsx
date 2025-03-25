@@ -1,24 +1,10 @@
 import { useEffect, useState } from "react";
+import useImgSizeFromWindow from "../hooks/useImgSizeFromWindow";
 import "../css/landing.css";
 import QuoteButton from "./QuoteButton";
 
 function Landing() {
-  const [imgSize, setImgSize] = useState({
-    height: window.innerHeight * 0.7,
-    width: window.innerWidth,
-  });
-
-  useEffect(() => {
-    const handleImgResize = () => {
-      setImgSize({
-        width: window.innerWidth,
-        height: window.innerHeight * 0.7,
-      });
-    };
-    window.addEventListener("resize", handleImgResize);
-
-    return () => window.removeEventListener("resize", handleImgResize);
-  }, []);
+  const imgSize = useImgSizeFromWindow(1, 0.7);
 
   return (
     <section className="landing-container">
@@ -30,7 +16,9 @@ function Landing() {
         className="landing-img"
       />
       <div className="landing-text">
-        <p className="sub-header">Your Coachella Valley solutions to pests</p>
+        <p className="landing-sub-header">
+          Your Coachella Valley solutions to pests
+        </p>
         <h1>
           <span className="red landing-header">ADVANCED</span>
           <span className="white landing-header">PEST</span>
