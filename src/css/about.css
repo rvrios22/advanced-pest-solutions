@@ -7,7 +7,14 @@
     margin: .5em auto;
     border-radius: 10px;
     border: 1.75px solid black;
-    object-fit: cover;
-    object-position: top;
+
     width: 100%;
+}
+
+@media (min-width: 500px) {
+    .grid-two-items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+    }
 }

@@ -13,13 +13,13 @@ function Landing() {
         alt="pest control"
         height={imgSize.height}
         width={imgSize.width}
-        className="landing-img"
+        className="object-cover-img"
       />
       <div className="landing-text">
-        <p className="landing-sub-header">
+        <p className="landing-sub-header text-stroke">
           Your Coachella Valley solutions to pests
         </p>
-        <h1>
+        <h1 className="text-stroke">
           <span className="red landing-header">ADVANCED</span>
           <span className="white landing-header">PEST</span>
           <span className="blue landing-header">SOLUTIONS</span>

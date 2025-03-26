@@ -3,11 +3,27 @@
     font-family: "Lora", serif;
     text-align: center;
     margin: .5em auto 0;
-    border-bottom: 1px solid black;
-    max-width: max-content;
 }
 
 .general-text {
     font-family: 'Lato', sans-serif;
     font-size: clamp(1rem, 2vw, 1.25rem);
 }
+
+.object-cover-img {
+    object-fit: cover;
+    object-position: top;
+}
+
+.relative-container {
+    position: relative;
+}
+
+.absolute-el {
+    position: absolute;
+}
+
+.text-stroke {
+    -webkit-text-stroke: 1.5px black;
+}
+
