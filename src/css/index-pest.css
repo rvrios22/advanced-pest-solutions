@@ -1,0 +1,11 @@
+.index-pests-section p {
+    padding-left: 1em;
+}
+@media (min-width: 525px) {
+    .index-pests-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1em;
+        padding: 0 1em 0;
+    }
+}

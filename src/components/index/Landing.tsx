@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react";
-import useImgSizeFromWindow from "../hooks/useImgSizeFromWindow";
-import "../css/landing.css";
-import QuoteButton from "./QuoteButton";
+import useImgSizeFromWindow from "../../hooks/useImgSizeFromWindow";
+import "../../css/landing.css";
+import QuoteButton from "../QuoteButton";
 
 function Landing() {
   const imgSize = useImgSizeFromWindow(1, 0.7);

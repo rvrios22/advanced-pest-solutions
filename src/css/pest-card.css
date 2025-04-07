@@ -1,0 +1,8 @@
+.pest-card-container img {
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.pest-card-container h4 {
+    margin: .1em auto .25em;
+}

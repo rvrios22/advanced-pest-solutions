@@ -13,12 +13,14 @@ import { createFileRoute } from '@tanstack/react-router'
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as PestsNameImport } from './routes/pests/$name'
 
 // Create Virtual Routes
 
 const QuoteLazyImport = createFileRoute('/quote')()
 const AboutLazyImport = createFileRoute('/about')()
 const IndexLazyImport = createFileRoute('/')()
+const PestsIndexLazyImport = createFileRoute('/pests/')()
 
 // Create/Update Routes
 
@@ -39,6 +41,18 @@ const IndexLazyRoute = IndexLazyImport.update({
   path: '/',
   getParentRoute: () => rootRoute,
 } as any).lazy(() => import('./routes/index.lazy').then((d) => d.Route))
+
+const PestsIndexLazyRoute = PestsIndexLazyImport.update({
+  id: '/pests/',
+  path: '/pests/',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import('./routes/pests/index.lazy').then((d) => d.Route))
+
+const PestsNameRoute = PestsNameImport.update({
+  id: '/pests/$name',
+  path: '/pests/$name',
+  getParentRoute: () => rootRoute,
+} as any)
 
 // Populate the FileRoutesByPath interface
 
@@ -65,6 +79,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof QuoteLazyImport
       parentRoute: typeof rootRoute
     }
+    '/pests/$name': {
+      id: '/pests/$name'
+      path: '/pests/$name'
+      fullPath: '/pests/$name'
+      preLoaderRoute: typeof PestsNameImport
+      parentRoute: typeof rootRoute
+    }
+    '/pests/': {
+      id: '/pests/'
+      path: '/pests'
+      fullPath: '/pests'
+      preLoaderRoute: typeof PestsIndexLazyImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
@@ -74,12 +102,16 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexLazyRoute
   '/about': typeof AboutLazyRoute
   '/quote': typeof QuoteLazyRoute
+  '/pests/$name': typeof PestsNameRoute
+  '/pests': typeof PestsIndexLazyRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexLazyRoute
   '/about': typeof AboutLazyRoute
   '/quote': typeof QuoteLazyRoute
+  '/pests/$name': typeof PestsNameRoute
+  '/pests': typeof PestsIndexLazyRoute
 }
 
 export interface FileRoutesById {
@@ -87,14 +119,16 @@ export interface FileRoutesById {
   '/': typeof IndexLazyRoute
   '/about': typeof AboutLazyRoute
   '/quote': typeof QuoteLazyRoute
+  '/pests/$name': typeof PestsNameRoute
+  '/pests/': typeof PestsIndexLazyRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/quote'
+  fullPaths: '/' | '/about' | '/quote' | '/pests/$name' | '/pests'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/quote'
-  id: '__root__' | '/' | '/about' | '/quote'
+  to: '/' | '/about' | '/quote' | '/pests/$name' | '/pests'
+  id: '__root__' | '/' | '/about' | '/quote' | '/pests/$name' | '/pests/'
   fileRoutesById: FileRoutesById
 }
 
@@ -102,12 +136,16 @@ export interface RootRouteChildren {
   IndexLazyRoute: typeof IndexLazyRoute
   AboutLazyRoute: typeof AboutLazyRoute
   QuoteLazyRoute: typeof QuoteLazyRoute
+  PestsNameRoute: typeof PestsNameRoute
+  PestsIndexLazyRoute: typeof PestsIndexLazyRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexLazyRoute: IndexLazyRoute,
   AboutLazyRoute: AboutLazyRoute,
   QuoteLazyRoute: QuoteLazyRoute,
+  PestsNameRoute: PestsNameRoute,
+  PestsIndexLazyRoute: PestsIndexLazyRoute,
 }
 
 export const routeTree = rootRoute
@@ -122,7 +160,9 @@ export const routeTree = rootRoute
       "children": [
         "/",
         "/about",
-        "/quote"
+        "/quote",
+        "/pests/$name",
+        "/pests/"
       ]
     },
     "/": {
@@ -133,6 +173,12 @@ export const routeTree = rootRoute
     },
     "/quote": {
       "filePath": "quote.lazy.tsx"
+    },
+    "/pests/$name": {
+      "filePath": "pests/$name.tsx"
+    },
+    "/pests/": {
+      "filePath": "pests/index.lazy.tsx"
     }
   }
 }
