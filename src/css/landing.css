@@ -1,6 +1,7 @@
 .landing-container {
     position: relative;
     color: white;
+    min-height: 70vh;
 }
 
 .landing-text {

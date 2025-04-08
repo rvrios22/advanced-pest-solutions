@@ -13,22 +13,15 @@ import { createFileRoute } from '@tanstack/react-router'
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as IndexImport } from './routes/index'
 import { Route as PestsNameImport } from './routes/pests/$name'
 
 // Create Virtual Routes
 
-const QuoteLazyImport = createFileRoute('/quote')()
 const AboutLazyImport = createFileRoute('/about')()
-const IndexLazyImport = createFileRoute('/')()
 const PestsIndexLazyImport = createFileRoute('/pests/')()
 
 // Create/Update Routes
-
-const QuoteLazyRoute = QuoteLazyImport.update({
-  id: '/quote',
-  path: '/quote',
-  getParentRoute: () => rootRoute,
-} as any).lazy(() => import('./routes/quote.lazy').then((d) => d.Route))
 
 const AboutLazyRoute = AboutLazyImport.update({
   id: '/about',
@@ -36,11 +29,11 @@ const AboutLazyRoute = AboutLazyImport.update({
   getParentRoute: () => rootRoute,
 } as any).lazy(() => import('./routes/about.lazy').then((d) => d.Route))
 
-const IndexLazyRoute = IndexLazyImport.update({
+const IndexRoute = IndexImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRoute,
-} as any).lazy(() => import('./routes/index.lazy').then((d) => d.Route))
+} as any)
 
 const PestsIndexLazyRoute = PestsIndexLazyImport.update({
   id: '/pests/',
@@ -62,7 +55,7 @@ declare module '@tanstack/react-router' {
       id: '/'
       path: '/'
       fullPath: '/'
-      preLoaderRoute: typeof IndexLazyImport
+      preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
     '/about': {
@@ -70,13 +63,6 @@ declare module '@tanstack/react-router' {
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutLazyImport
-      parentRoute: typeof rootRoute
-    }
-    '/quote': {
-      id: '/quote'
-      path: '/quote'
-      fullPath: '/quote'
-      preLoaderRoute: typeof QuoteLazyImport
       parentRoute: typeof rootRoute
     }
     '/pests/$name': {
@@ -99,51 +85,46 @@ declare module '@tanstack/react-router' {
 // Create and export the route tree
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexLazyRoute
+  '/': typeof IndexRoute
   '/about': typeof AboutLazyRoute
-  '/quote': typeof QuoteLazyRoute
   '/pests/$name': typeof PestsNameRoute
   '/pests': typeof PestsIndexLazyRoute
 }
 
 export interface FileRoutesByTo {
-  '/': typeof IndexLazyRoute
+  '/': typeof IndexRoute
   '/about': typeof AboutLazyRoute
-  '/quote': typeof QuoteLazyRoute
   '/pests/$name': typeof PestsNameRoute
   '/pests': typeof PestsIndexLazyRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
-  '/': typeof IndexLazyRoute
+  '/': typeof IndexRoute
   '/about': typeof AboutLazyRoute
-  '/quote': typeof QuoteLazyRoute
   '/pests/$name': typeof PestsNameRoute
   '/pests/': typeof PestsIndexLazyRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/quote' | '/pests/$name' | '/pests'
+  fullPaths: '/' | '/about' | '/pests/$name' | '/pests'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/quote' | '/pests/$name' | '/pests'
-  id: '__root__' | '/' | '/about' | '/quote' | '/pests/$name' | '/pests/'
+  to: '/' | '/about' | '/pests/$name' | '/pests'
+  id: '__root__' | '/' | '/about' | '/pests/$name' | '/pests/'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
-  IndexLazyRoute: typeof IndexLazyRoute
+  IndexRoute: typeof IndexRoute
   AboutLazyRoute: typeof AboutLazyRoute
-  QuoteLazyRoute: typeof QuoteLazyRoute
   PestsNameRoute: typeof PestsNameRoute
   PestsIndexLazyRoute: typeof PestsIndexLazyRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
-  IndexLazyRoute: IndexLazyRoute,
+  IndexRoute: IndexRoute,
   AboutLazyRoute: AboutLazyRoute,
-  QuoteLazyRoute: QuoteLazyRoute,
   PestsNameRoute: PestsNameRoute,
   PestsIndexLazyRoute: PestsIndexLazyRoute,
 }
@@ -160,19 +141,15 @@ export const routeTree = rootRoute
       "children": [
         "/",
         "/about",
-        "/quote",
         "/pests/$name",
         "/pests/"
       ]
     },
     "/": {
-      "filePath": "index.lazy.tsx"
+      "filePath": "index.tsx"
     },
     "/about": {
       "filePath": "about.lazy.tsx"
-    },
-    "/quote": {
-      "filePath": "quote.lazy.tsx"
     },
     "/pests/$name": {
       "filePath": "pests/$name.tsx"

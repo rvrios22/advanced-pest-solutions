@@ -1,5 +1,6 @@
 .index-pests-section p {
     padding-left: 1em;
+    text-align: center;
 }
 @media (min-width: 525px) {
     .index-pests-container {

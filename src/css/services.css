@@ -47,6 +47,10 @@
     margin-bottom: .75em;
 }
 
+.services-desc button {
+    margin: 0 auto;
+}
+
 @media (min-width: 500px) {
     .service-list {
         display: flex;

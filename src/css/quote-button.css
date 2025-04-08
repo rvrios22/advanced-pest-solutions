@@ -1,0 +1,19 @@
+.quote-button {
+    min-width: fit-content;
+    background-color: red;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 0.25em 0.5em;
+    color: white;
+    font-size: clamp(1.1em, 1.5vw, 2em);
+    white-space: nowrap;
+    -webkit-text-stroke: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    transition: opacity 200ms;
+  }
+  
+  .quote-button:hover {
+    opacity: .8;
+    transition: opacity 200ms;
+  }
