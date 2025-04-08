@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .sub-header {
     font-size: clamp(1.5rem, 4vw, 2.5rem);
     font-family: "Lora", serif;

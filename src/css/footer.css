@@ -1,0 +1,11 @@
+footer {
+    background-color: rgb(59, 59, 59);
+    border-top: 1px solid black;
+    text-align: center;
+    color: white;
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: space-evenly;
+}
