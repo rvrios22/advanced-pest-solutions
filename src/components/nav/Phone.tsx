@@ -3,8 +3,8 @@ function Phone() {
     <button className="phone-button">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="32"
-        height="32"
+        width="28"
+        height="25"
         viewBox="4 4 25 25"
         fill="none"
         stroke="#000"
