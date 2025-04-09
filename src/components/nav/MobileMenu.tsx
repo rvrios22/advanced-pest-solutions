@@ -1,12 +1,29 @@
-import React from 'react'
-import QuoteButton from '../QuoteButton'
+import QuoteButton from "../QuoteButton";
+import { Link } from "@tanstack/react-router";
 
-function MobileMenu() {
+function MobileMenu({ isMenuOpen, setIsMenuOpen }) {
   return (
-    <menu>
+    <>
+      <img
+        src="/close.svg"
+        alt="Close"
+        height={30}
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+      />
+      <menu>
+        <Link to="/">
+          <span className="general-text">Home</span>
+        </Link>
+        <Link to="/pests">
+          <span className="general-text">Pest Library</span>
+        </Link>
+        <a href="#contact">
+          <span className="general-text">Contact Us</span>
+        </a>
         <QuoteButton />
-    </menu>
-  )
+      </menu>
+    </>
+  );
 }
 
-export default MobileMenu
+export default MobileMenu;

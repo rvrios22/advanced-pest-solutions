@@ -1,11 +1,13 @@
+import { useRef } from "react";
 import "../css/contact-form.css";
 
 function ContactForm() {
+  const contact = useRef(null)
   const handleEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   };
   return (
-    <section id="contact" className="contact-form-container">
+    <section ref={contact} id="contact" className="contact-form-container">
       <h2 className="sub-header">Ready To Talk?</h2>
       <form onSubmit={handleEmail} className="contact-form">
         <label htmlFor="name" className="contact-form-label general-text">

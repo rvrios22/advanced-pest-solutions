@@ -2,7 +2,7 @@ const pestLibrary = [
     {
         name: 'Ants',
         img: '',
-        link: '/pest/ants'
+        link: '/pests/ants'
     },
     {
         name: 'Cockroaches',
