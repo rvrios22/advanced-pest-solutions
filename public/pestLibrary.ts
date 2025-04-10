@@ -49,6 +49,11 @@ const pestLibrary = [
         img: '',
         link: '/pests/spider'
     },
+    {
+        name: 'Scorpion',
+        img: '',
+        link: '/pests/scorpion'
+    },
 ]
 
 export default pestLibrary

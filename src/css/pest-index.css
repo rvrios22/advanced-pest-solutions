@@ -1,0 +1,15 @@
+.pest-index-container h1.sub-header {
+    margin: .5em auto .25em;
+}
+
+.pest-grid {
+    padding: 0 1em 0;
+}
+
+@media (min-width: 500px) {
+    .pest-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+    }
+}
