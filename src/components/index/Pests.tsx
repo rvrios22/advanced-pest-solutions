@@ -7,7 +7,7 @@ function Pests() {
     <section className="index-pests-section">
       <h2 className="sub-header">PESTS WE'RE EXPERTS ON</h2>
       <div className="index-pests-container">
-        {pestLibrary.map((pest, idx) => (
+        {pestLibrary.slice(0, 5).map((pest, idx) => (
           <PestCard key={idx} name={pest.name} img="" link={pest.link} />
         ))}
       </div>

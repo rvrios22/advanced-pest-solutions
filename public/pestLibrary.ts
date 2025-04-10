@@ -5,24 +5,49 @@ const pestLibrary = [
         link: '/pests/ants'
     },
     {
-        name: 'Cockroaches',
+        name: 'Bed Bug',
         img: '',
-        link: '/pests/cockroaches'
+        link: '/pests/bed-bug'
     },
     {
-        name: 'Rodents',
+        name: 'Beetle',
         img: '',
-        link: '/pests/rodents'
+        link: '/pests/beetle'
     },
     {
-        name: 'Earwigs',
+        name: 'Cockroach',
         img: '',
-        link: '/pests/earwigs'
+        link: '/pests/cockroach'
     },
     {
-        name: 'Beetles',
+        name: 'Cricket',
         img: '',
-        link: '/pests/beetles'
+        link: '/pests/cricket'
+    },
+    {
+        name: 'Earwig',
+        img: '',
+        link: '/pests/earwig'
+    },
+    {
+        name: 'Fly',
+        img: '',
+        link: '/pests/fly'
+    },
+    {
+        name: 'Rodent',
+        img: '',
+        link: '/pests/rodent'
+    },
+    {
+        name: 'Silverfish',
+        img: '',
+        link: '/pests/silverfish'
+    },
+    {
+        name: 'Spider',
+        img: '',
+        link: '/pests/spider'
     },
 ]
 

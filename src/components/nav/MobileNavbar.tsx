@@ -3,7 +3,7 @@ import "../../css/navbar.css";
 import Hamburger from "./Hamburger";
 import Phone from "./Phone";
 import MobileMenu from "./MobileMenu";
-import { useRouter } from "@tanstack/react-router";
+import { Link, useRouter } from "@tanstack/react-router";
 
 function MobileNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,9 +15,13 @@ function MobileNavbar() {
   }, [router]);
   return (
     <nav>
-      <div className="nav-item-left">APS</div>
+      <div className="nav-item-left">
+        <Link to="/">APS</Link>
+      </div>
       <div className="nav-item-right">
-        <Phone />
+        <a href="tel:+1-760-343-8622">
+          <Phone />
+        </a>
         <div onClick={() => setIsMenuOpen(!isMenuOpen)}>
           <Hamburger />
         </div>
