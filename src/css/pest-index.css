@@ -6,7 +6,7 @@
     padding: 0 1em 0;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 575px) {
     .pest-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;

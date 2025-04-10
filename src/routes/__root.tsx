@@ -5,7 +5,6 @@ import MobileNavbar from '../components/nav/MobileNavbar'
 import Navbar from '../components/nav/Navbar'
 import '../css/reset.css'
 import '../css/global.css'
-console.log(window.innerWidth)
 
 const RootComponent = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);

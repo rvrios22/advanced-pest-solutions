@@ -5,7 +5,9 @@ import "../../css/index-pest.css";
 function Pests() {
   return (
     <section className="index-pests-section">
-      <h2 className="sub-header">PESTS WE'RE EXPERTS ON</h2>
+      <h2 className="sub-header">
+        Pests We're <span className="red">EXPERTS</span> At
+      </h2>
       <div className="index-pests-container">
         {pestLibrary.slice(0, 5).map((pest, idx) => (
           <PestCard key={idx} name={pest.name} img="" link={pest.link} />

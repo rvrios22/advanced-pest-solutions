@@ -3,6 +3,7 @@ import pestLibrary from "../../../public/pestLibrary";
 import PestCard from "../../components/PestCard";
 import Footer from '../../components/Footer'
 import "../../css/pest-index.css";
+import ContactForm from "../../components/ContactForm";
 export const Route = createLazyFileRoute("/pests/")({
   component: RouteComponent,
 });
@@ -16,6 +17,7 @@ function RouteComponent() {
           <PestCard name={name} img="" link={link} key={idx} />
         ))}
       </div>
+      <ContactForm />
       <Footer />
     </main>
   );

@@ -1,9 +1,25 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute } from "@tanstack/react-router";
+import pestLibrary from "../../../public/pestLibrary";
 
-export const Route = createFileRoute('/pests/$name')({
+const fetchPest = (name: string) => {
+  const pest = pestLibrary.find((el) => el.link === `/pests/${name}`);
+  return pest;
+};
+
+export const Route = createFileRoute("/pests/$name")({
+  loader: async ({ params }) => fetchPest(params.name),
   component: RouteComponent,
-})
+});
 
 function RouteComponent() {
-  return <div>Hello "/pests/$name"!</div>
+  const pest = Route.useLoaderData();
+  if (!pest) {
+    return <>Pest not found</>;
+  }
+  const { name, desc } = pest;
+  return (
+    <>
+      {name}, {desc}
+    </>
+  );
 }
