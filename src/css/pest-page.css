@@ -1,0 +1,12 @@
+.pest-page-img {
+    object-fit: cover;
+}
+
+.pest-page-text {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.pest-page-text > * {
+    margin-top: .5em;
+}
