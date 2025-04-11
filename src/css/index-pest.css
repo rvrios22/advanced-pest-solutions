@@ -2,6 +2,11 @@
     padding-left: 1em;
     text-align: center;
 }
+
+.index-pests-container figure:first-child a img{
+    object-position: top;
+}
+
 @media (min-width: 525px) {
     .index-pests-container {
         display: grid;

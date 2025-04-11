@@ -4,6 +4,10 @@
     border: 1px solid black;
 }
 
+.pest-card-img {
+    object-fit: cover;
+}
+
 .pest-card-container h4 {
     margin: .1em auto .25em;
 }

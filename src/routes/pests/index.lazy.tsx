@@ -11,10 +11,10 @@ export const Route = createLazyFileRoute("/pests/")({
 function RouteComponent() {
   return (
     <main className="pest-index-container">
-      <h1 className="sub-header">PESTS WE'RE EXPERTS AT</h1>
+      <h1 className="sub-header">PESTS WE'RE EXPERTS ON</h1>
       <div className="pest-grid">
         {pestLibrary.map(({ name, img, link }, idx) => (
-          <PestCard name={name} img="" link={link} key={idx} />
+          <PestCard name={name} img={img} link={link} key={idx} />
         ))}
       </div>
       <ContactForm />

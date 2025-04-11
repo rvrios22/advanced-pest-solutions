@@ -8,19 +8,19 @@ import "../css/pest-card.css";
 import useImgSizeFromWindow from "../hooks/useImgSizeFromWindow";
 
 function PestCard({ name, img, link }: PestCard) {
-  const imgSize = useImgSizeFromWindow(0.66, .25);
+  const imgSize = useImgSizeFromWindow(0.66, 0.25);
   return (
     <figure className="pest-card-container">
       <Link to={link}>
         <img
-          src="placeHolder.webp"
+          src={img}
           alt=""
           width={imgSize.width}
           height={imgSize.height}
-          className="object-cover-img"
+          className="pest-card-img"
         />
-        <h4 className="sub-header">{name}</h4>
       </Link>
+      <h4 className="sub-header">{name}</h4>
     </figure>
   );
 }

@@ -10,7 +10,7 @@ function Pests() {
       </h2>
       <div className="index-pests-container">
         {pestLibrary.slice(0, 5).map((pest, idx) => (
-          <PestCard key={idx} name={pest.name} img="" link={pest.link} />
+          <PestCard key={idx} name={pest.name} img={pest.img} link={pest.link} />
         ))}
       </div>
       <p className="general-text">

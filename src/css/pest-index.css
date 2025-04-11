@@ -6,10 +6,22 @@
     padding: 0 1em 0;
 }
 
+.pest-grid figure:first-child a img{
+    object-position: top;
+}
+
 @media (min-width: 575px) {
     .pest-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        gap: 1em;
+    }
+
+}
+@media (min-width: 900px) {
+    .pest-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
         gap: 1em;
     }
 }

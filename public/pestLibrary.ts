@@ -1,67 +1,67 @@
 const pestLibrary = [
     {
         name: 'Ants',
-        img: '',
+        img: '/ants.webp',
         link: '/pests/ants',
         desc: 'asdfeqasdf'
     },
     {
-        name: 'Bed Bug',
-        img: '',
+        name: 'Bed Bugs',
+        img: '/bedBugs.webp',
         link: '/pests/bed-bug',
         desc: 'asdfeqasdf'
     },
     {
-        name: 'Beetle',
-        img: '',
+        name: 'Beetles',
+        img: '/beetles.webp',
         link: '/pests/beetle',
         desc: 'asdfeqasdf'
     },
     {
-        name: 'Cockroach',
-        img: '',
+        name: 'Cockroachs',
+        img: '/cockroach.webp',
         link: '/pests/cockroach',
         desc: 'asdfeqasdf'
     },
     {
-        name: 'Cricket',
-        img: '',
+        name: 'Crickets',
+        img: '/crickets.webp',
         link: '/pests/cricket',
         desc: 'asdfeqasdf'
     },
     {
-        name: 'Earwig',
-        img: '',
+        name: 'Earwigs',
+        img: '/earwigs.webp',
         link: '/pests/earwig',
         desc: 'asdfeqasdf'
     },
     {
-        name: 'Fly',
-        img: '',
+        name: 'Flies',
+        img: '/flies.webp',
         link: '/pests/fly',
         desc: 'asdfeqasdf'
     },
     {
-        name: 'Rodent',
-        img: '',
+        name: 'Rodents',
+        img: '/rodents.webp',
         link: '/pests/rodent',
         desc: 'asdfeqasdf'
     },
     {
         name: 'Silverfish',
-        img: '',
+        img: '/silverfish.webp',
         link: '/pests/silverfish',
         desc: 'asdfeqasdf'
     },
     {
-        name: 'Spider',
-        img: '',
+        name: 'Spiders',
+        img: '/spiders.webp',
         link: '/pests/spider',
         desc: 'asdfeqasdf'
     },
     {
-        name: 'Scorpion',
-        img: '',
+        name: 'Scorpions',
+        img: '/scorpions.webp',
         link: '/pests/scorpion',
         desc: 'asdfeqasdf'
     },
