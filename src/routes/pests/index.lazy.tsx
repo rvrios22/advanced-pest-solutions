@@ -4,6 +4,7 @@ import PestCard from "../../components/PestCard";
 import Footer from '../../components/Footer'
 import "../../css/pest-index.css";
 import ContactForm from "../../components/ContactForm";
+
 export const Route = createLazyFileRoute("/pests/")({
   component: RouteComponent,
 });

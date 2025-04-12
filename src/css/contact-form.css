@@ -45,3 +45,7 @@ input[type="submit"]:hover {
     opacity: .8;
     transition: opacity 200ms;
 }
+
+.contact-form-container p {
+    text-align: center;
+}

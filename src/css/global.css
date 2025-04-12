@@ -30,3 +30,7 @@ html {
 .text-stroke {
     -webkit-text-stroke: 1.5px black;
 }
+
+a:visited {
+    color: black;
+}
