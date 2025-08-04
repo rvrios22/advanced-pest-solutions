@@ -27,11 +27,7 @@ function Services() {
       </ul>
       <div className="services-desc">
         <p className="general-text">
-          We aim to give you the best service for your individual needs. Lorem
-          ipsum dolor sit, amet consectetur adipisicing elit. Provident porro
-          aut in sunt! Vel atque corrupti sint veniam adipisci est enim
-          asperiores consequuntur optio. Optio praesentium alias dicta itaque
-          voluptate?
+          We aim to give you the best service for your individual needs.
         </p>
         <QuoteButton />
       </div>
