@@ -1,7 +1,13 @@
 import QuoteButton from "../QuoteButton";
 import { Link } from "@tanstack/react-router";
 
-function MobileMenu({ isMenuOpen, setIsMenuOpen }) {
+function MobileMenu({
+  isMenuOpen,
+  setIsMenuOpen,
+}: {
+  isMenuOpen: boolean;
+  setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}) {
   return (
     <>
       <img

@@ -22,7 +22,7 @@ const RootComponent = () => {
     <>
       {windowWidth > 600 ? <Navbar /> : <MobileNavbar />}
       <Outlet />
-      {/* <TanStackRouterDevtools /> */}
+      <TanStackRouterDevtools />
     </>
   );
 };

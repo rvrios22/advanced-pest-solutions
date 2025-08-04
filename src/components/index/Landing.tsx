@@ -4,7 +4,7 @@ import QuoteButton from "../QuoteButton";
 
 function Landing() {
   const imgSize = useImgSizeFromWindow(1, 0.7);
-  const logoSize = useImgSizeFromWindow(0.25, 0.3);
+  // const logoSize = useImgSizeFromWindow(0.25, 0.3);
 
   return (
     <section className="landing-container">

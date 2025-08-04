@@ -1,4 +1,3 @@
-import { Link } from "@tanstack/react-router";
 import "../css/quote-button.css";
 function QuoteButton() {
   return (
