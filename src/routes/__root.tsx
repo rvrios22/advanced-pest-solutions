@@ -1,10 +1,10 @@
-import { createRootRoute, Outlet } from '@tanstack/react-router'
-import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
-import { useEffect, useState } from 'react'
-import MobileNavbar from '../components/nav/MobileNavbar'
-import Navbar from '../components/nav/Navbar'
-import '../css/reset.css'
-import '../css/global.css'
+import { createRootRoute, Outlet } from "@tanstack/react-router";
+import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
+import { useEffect, useState } from "react";
+import MobileNavbar from "../components/nav/MobileNavbar";
+import Navbar from "../components/nav/Navbar";
+import "../css/reset.css";
+import "../css/global.css";
 
 const RootComponent = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);

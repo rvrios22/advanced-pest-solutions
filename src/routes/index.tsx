@@ -5,6 +5,7 @@ import Services from "../components/index/Services";
 import Pests from "../components/index/Pests";
 import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";
+
 export const Route = createFileRoute("/")({
   component: RouteComponent,
 });
