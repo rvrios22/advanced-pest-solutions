@@ -20,8 +20,8 @@ function footer() {
       </div>
       <div className="footer-child">
         <h6 className="sub-header">Hours</h6>
-        <p className="general-text">Mondays - Fridays: 7AM - 3:30PM</p>
-        <p className="general-text">Saturdays: 10AM - 2PM</p>
+        <p className="general-text">Mondays - Fridays: 8AM - 5PM</p>
+        <p className="general-text">Saturdays: 8AM - 2PM</p>
         <p className="general-text">Sundays: Closed</p>
       </div>
       <div className="footer-child">

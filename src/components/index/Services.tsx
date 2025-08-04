@@ -6,29 +6,32 @@ function Services() {
   const imgSize = useImgSizeFromWindow(0.95, 0.25);
   return (
     <section className="services-container">
-      <div className="relative-container">
+      {/* <div className="relative-container">
         <img
           className="object-cover-img"
-          src="./placeHolder.webp"
+          src="./truck.webp"
           alt=""
           width={imgSize.width}
           height={imgSize.height}
         />
         <h2 className="sub-header absolute-el text-stroke">OUR SERVICES</h2>
-      </div>
+      </div> */}
       <h3 className="sub-header">
         We offer a variety of services to suit <span>YOUR</span> specific needs
       </h3>
       <ul className="service-list">
-        <li className="service-item general-text">On Demand</li>
-        <li className="service-item general-text">Monthly</li>
-        <li className="service-item general-text">Bi-monthly</li>
-        <li className="service-item general-text">Quarterly</li>
-        <li className="service-item general-text">Seasonal</li>
+        <li className="service-item general-text">One Time Services</li>
+        <li className="service-item general-text">Reocurring</li>
+        <li className="service-item general-text">Rodent & Bird Proofing</li>
+        <li className="service-item general-text">Mosquito</li>
       </ul>
       <div className="services-desc">
         <p className="general-text">
-            We aim to give you the best service for your individual needs. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident porro aut in sunt! Vel atque corrupti sint veniam adipisci est enim asperiores consequuntur optio. Optio praesentium alias dicta itaque voluptate?
+          We aim to give you the best service for your individual needs. Lorem
+          ipsum dolor sit, amet consectetur adipisicing elit. Provident porro
+          aut in sunt! Vel atque corrupti sint veniam adipisci est enim
+          asperiores consequuntur optio. Optio praesentium alias dicta itaque
+          voluptate?
         </p>
         <QuoteButton />
       </div>

@@ -6,14 +6,9 @@
     margin: 0 auto;
     border-radius: 10px;
     border: 1px solid black;
+    object-position: center;
 }
 
-.services-container h2 {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-}
 
 .services-container h3.sub-header span {
     color: red;
@@ -29,7 +24,7 @@
     color: red;
     text-align: center;
     margin: 0 auto;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     font-size: clamp(1.25rem, 3vw, 2rem);
 }
 
@@ -51,9 +46,9 @@
     margin: 0 auto;
 }
 
-@media (min-width: 500px) {
+/* @media (min-width: 500px) {
     .service-list {
         display: flex;
         justify-content: space-evenly;
     }
-}
+} */

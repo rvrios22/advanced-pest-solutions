@@ -4,6 +4,10 @@
     min-height: 70vh;
 }
 
+.landing-container img {
+    object-position: center;
+}
+
 .landing-text {
     position: absolute;
     bottom: 2%;

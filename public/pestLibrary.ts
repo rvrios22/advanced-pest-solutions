@@ -49,6 +49,13 @@ const pestLibrary = [
         control: 'Pest control methods for flies focus on eliminating breeding sites and reducing access to food and moisture. Professionals often begin by identifying and removing sources of attraction, such as garbage, compost, or spilled food. Sanitation is critical—regular cleaning and proper waste storage can greatly reduce fly populations. Physical barriers like screens and air curtains can help keep flies out of buildings. For existing infestations, insect light traps, fly baits, and residual insecticides may be used strategically. Integrated Pest Management (IPM) techniques are commonly employed, combining sanitation, exclusion, and targeted chemical treatments for effective and sustainable fly control.'
     },
     {
+        name: 'Mosquitoes',
+        img: '/mosquito.webp',
+        link: '/pests/mosquito',
+        desc: 'Mosquitoes are small, flying insects belonging to the family Culicidae, known for their slender bodies, long legs, and distinctive long proboscis used for feeding. Only female mosquitoes bite, as they require blood to develop their eggs, while males feed on nectar. Mosquitoes are most active during dawn and dusk and thrive in warm, humid environments. They are not just a nuisance; they are also vectors for serious diseases such as malaria, dengue, Zika virus, and West Nile virus, making them a significant public health concern in many parts of the world.',
+        control: 'To control mosquitoes, pest control efforts focus on both eliminating breeding grounds and targeting adult populations. Because mosquitoes lay their eggs in standing water, professionals often recommend removing or treating sources such as birdbaths, clogged gutters, or puddles. Larvicides can be applied to water that cannot be drained, killing mosquito larvae before they mature. For adult mosquitoes, treatments may include fogging with insecticides, using mosquito traps, or applying residual sprays to vegetation and building exteriors. Personal protective measures like insect repellents and window screens are also encouraged. Integrated Pest Management (IPM) strategies combine these approaches for effective, environmentally responsible mosquito control.'
+    },
+    {
         name: 'Rodents',
         img: '/rodents.webp',
         link: '/pests/rodent',
