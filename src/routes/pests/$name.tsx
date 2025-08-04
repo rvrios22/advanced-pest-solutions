@@ -3,7 +3,6 @@ import pestLibrary from "../../../public/pestLibrary";
 import useImgSizeFromWindow from "../../hooks/useImgSizeFromWindow";
 import ContactForm from "../../components/ContactForm";
 import "../../css/pest-page.css";
-import Footer from "../../components/Footer";
 
 const fetchPest = (name: string) => {
   const pest = pestLibrary.find((el) => el.link === `/pests/${name}`);
@@ -38,7 +37,6 @@ function RouteComponent() {
         <p className="general-text">{control}</p>
       </section>
       <ContactForm />
-      <Footer />
     </>
   );
 }
