@@ -3,9 +3,9 @@ import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 import { useEffect, useState } from "react";
 import MobileNavbar from "../components/nav/MobileNavbar";
 import Navbar from "../components/nav/Navbar";
+import Footer from "../components/Footer";
 import "../css/reset.css";
 import "../css/global.css";
-import Footer from "../components/Footer";
 
 const RootComponent = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
