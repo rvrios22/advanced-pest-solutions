@@ -1,6 +1,6 @@
 import "../css/footer.css";
 
-function footer() {
+function Footer() {
   return (
     <footer>
       <div className="footer-child">
@@ -48,4 +48,4 @@ function footer() {
   );
 }
 
-export default footer;
+export default Footer;
