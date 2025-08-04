@@ -1,6 +1,6 @@
-import useImgSizeFromWindow from "../../hooks/useImgSizeFromWindow";
-import "../../css/landing.css";
-import QuoteButton from "../QuoteButton";
+import useImgSizeFromWindow from "../hooks/useImgSizeFromWindow";
+import QuoteButton from "./QuoteButton";
+import "../css/landing.css";
 
 function Landing() {
   const imgSize = useImgSizeFromWindow(1, 0.7);

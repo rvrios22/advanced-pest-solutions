@@ -1,5 +1,5 @@
-import useImgSizeFromWindow from "../../hooks/useImgSizeFromWindow";
-import "../../css/about.css";
+import useImgSizeFromWindow from "../hooks/useImgSizeFromWindow";
+import "../css/about.css";
 
 function About() {
   const imgSize = useImgSizeFromWindow(0.85, 0.7);

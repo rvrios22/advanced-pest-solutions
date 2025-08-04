@@ -1,6 +1,6 @@
 // import useImgSizeFromWindow from "../../hooks/useImgSizeFromWindow";
-import "../../css/services.css";
-import QuoteButton from "../QuoteButton";
+import "../css/services.css";
+import QuoteButton from "./QuoteButton";
 
 function Services() {
   // const imgSize = useImgSizeFromWindow(0.95, 0.25);
