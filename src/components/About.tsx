@@ -10,7 +10,7 @@ function About() {
       <div className="grid-two-items">
         <img
           className="object-cover-img"
-          src="./selfie.webp"
+          src="./truckSelfie.webp"
           alt="Owner"
           width={imgSize.width}
           height={imgSize.height}
